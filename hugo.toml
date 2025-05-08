@@ -30,5 +30,5 @@ url = "/#rozpis-sluzeb"
 weight = 6
 [[menu.main]]
 name = "Kontakt & Ordinační hodiny"
-url = "/kontakt/"
+url = "/#kontakt"
 weight = 7
