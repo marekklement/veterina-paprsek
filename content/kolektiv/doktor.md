@@ -1,8 +1,8 @@
 ---
-title: "MVDr. Jan Novák"
-position: "Veterinární lékař"
+title: MVDr. Jan Novák
+position: Veterinární lékař
 weight: 10
-image: "/images/uploads/doktor.jpg"
+image: /images/uploads/doktor.png
 draft: false
 ---
 
