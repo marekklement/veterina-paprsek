@@ -1,7 +1,7 @@
 ---
-title: Marek Klement
-position: Ajťák
+title: Mgr. Petr Zeman
+position: Manager praxe
 weight: 2
-image: /images/uploads/ff.png
+image: /images/uploads/petrzeman.jpg
 ---
-P﻿ako je to
+Petr se stará o to, aby se chod praxe nezastavil.
