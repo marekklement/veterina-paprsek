@@ -34,6 +34,18 @@ header .container {
     align-items: center;
 }
 
+/* Levá část hlavičky - logo a telefonní čísla */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-logo img {
+    height: 50px;
+    width: auto;
+}
+
 /* Telefonní čísla */
 .contact-numbers {
     display: flex;
@@ -135,7 +147,7 @@ nav .menu li a.active {
     }
 }
 
-/* Responsivní menu pro mobilní zařízení */
+/* Responzivní menu pro mobilní zařízení */
 @media (max-width: 992px) {
     .menu-toggle {
         display: block;
@@ -181,10 +193,25 @@ nav .menu li a.active {
         transform: rotate(-45deg);
         bottom: 0;
     }
+
+    /* Úpravy pro logo v hlavičce na středních obrazovkách */
+    .header-logo img {
+        height: 45px;
+    }
 }
 
 /* Vylepšení pro velmi úzké obrazovky */
-@media (max-width: 350px) {
+@media (max-width: 480px) {
+    .header-left {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .header-logo img {
+        height: 40px;
+    }
+
     .contact-numbers a {
         font-size: 0.85rem;
     }
