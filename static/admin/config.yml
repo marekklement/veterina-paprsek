@@ -56,4 +56,4 @@ collections:
               - label: "Doktoři"
                 name: "doktori"
                 widget: "list"
-                field: {label: "Doktor", name: "doktor" widget: "string"}
+                field: {label: "Doktor", name: "doktor", widget: "string"}
