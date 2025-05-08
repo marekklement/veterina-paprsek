@@ -249,11 +249,23 @@ main {
 
 .popup-content {
     background-color: #fff;
-    padding: 20px;
+    padding: 30px;
     border-radius: 5px;
-    width: 80%;
-    max-width: 500px;
+    width: 90%;
+    max-width: 700px;
     position: relative;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+.popup-content h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #97c240;
+}
+
+.popup-content p, .popup-content h3 {
+    font-size: 20px;
 }
 
 .close {
