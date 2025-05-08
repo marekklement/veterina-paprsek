@@ -94,9 +94,6 @@ nav .menu li a.active {
     padding: 10px;
     height: 40px;
     width: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
 }
 
@@ -141,7 +138,7 @@ nav .menu li a.active {
 /* Responsivní menu pro mobilní zařízení */
 @media (max-width: 992px) {
     .menu-toggle {
-        display: flex;
+        display: block;
         z-index: 101;
     }
 
