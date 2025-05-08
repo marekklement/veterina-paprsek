@@ -50,6 +50,7 @@ header .container {
 .header-logo img {
     height: 50px;
     width: auto;
+    margin-left: 40px;
 }
 
 /* Telefonní čísla */
