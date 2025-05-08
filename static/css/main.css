@@ -40,7 +40,7 @@ body {
 .services-content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
+    gap: 50px; /* Zvětšeno z 30px na 50px pro větší mezeru mezi sloupci */
     align-items: start;
 }
 
@@ -52,7 +52,7 @@ body {
 }
 
 .services-list h3 {
-    font-size: 1.3rem;
+    font-size: 1.2rem; /* Zmenšeno z 1.3rem */
     color: #444;
     margin-bottom: 20px;
     font-weight: 600;
@@ -63,19 +63,21 @@ body {
 }
 
 .services-list li {
-    margin-bottom: 10px;
+    margin-bottom: 8px; /* Zmenšeno z 10px */
     position: relative;
     list-style-type: none;
     padding-left: 15px;
+    font-size: 0.9rem; /* Zmenšeno písmo v odrážkách */
+    line-height: 1.5;
 }
 
 .services-list li:before {
     content: "";
     position: absolute;
     left: 0;
-    top: 10px;
-    width: 6px;
-    height: 6px;
+    top: 8px; /* Upraveno pro zarovnání s menším textem */
+    width: 5px; /* Zmenšeno z 6px */
+    height: 5px; /* Zmenšeno z 6px */
     border-radius: 50%;
     background-color: #97c240; /* Zelená barva odrážek */
 }
