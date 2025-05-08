@@ -49,11 +49,11 @@ collections:
         file: "data/sluzby.json"
         fields:
           - label: "Dny"
-            name: "body"
+            name: "days"
             widget: "list"
             fields:
               - {label: "Den", name: "den", widget: "string"}
               - label: "Doktoři"
                 name: "doktori"
                 widget: "list"
-                field: {label: "Doktor", widget: "string"}
+                field: {label: "Doktor", name: "doktor" widget: "string"}
