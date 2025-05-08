@@ -39,9 +39,13 @@ body {
 
 .services-content {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 50px; /* Zvětšeno z 30px na 50px pro větší mezeru mezi sloupci */
+    grid-template-columns: 0.8fr 1fr 1fr; /* Změněno z 1fr 1fr 1fr na 0.8fr 1fr 1fr pro menší sloupec s obrázkem */
+    gap: 70px; /* Zvětšeno z 50px na 70px pro ještě větší mezeru mezi sloupci */
     align-items: start;
+}
+
+.services-image {
+    max-width: 90%; /* Omezení šířky obrázku na 90% jeho kontejneru */
 }
 
 .services-image img {
@@ -90,7 +94,7 @@ body {
     }
 
     .services-image {
-        max-width: 500px;
+        max-width: 400px; /* Omezení maximální šířky obrázku na mobilních zařízeních */
         margin: 0 auto;
     }
 
