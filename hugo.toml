@@ -14,7 +14,7 @@ url = "/#o-nas"
 weight = 2
 [[menu.main]]
 name = "Co umíme"
-url = "/sluzby/"
+url = "/#co-umime"
 weight = 3
 [[menu.main]]
 name = "Aktuality"

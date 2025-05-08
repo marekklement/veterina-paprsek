@@ -12,8 +12,98 @@ body {
     color: #333;
 }
 
-/* Přizpůsobení kotev s ohledem na fixní hlavičku */
-#domu, #o-nas {
+/* Sekce Co umíme */
+.services-section {
+    padding: 80px 0;
+    background-color: #f5f9f0; /* Lehce zelenkavé pozadí */
+}
+
+.services-image-top {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.services-image-top img {
+    max-width: 180px;
+    height: auto;
+}
+
+.services-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    line-height: 1.7;
+}
+
+.services-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.services-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.services-list h3 {
+    font-size: 1.3rem;
+    color: #444;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.services-list ul {
+    padding-left: 20px;
+}
+
+.services-list li {
+    margin-bottom: 10px;
+    position: relative;
+    list-style-type: none;
+    padding-left: 15px;
+}
+
+.services-list li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #97c240; /* Zelená barva odrážek */
+}
+
+/* Responzivní úpravy pro sekci Co umíme */
+@media (max-width: 992px) {
+    .services-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .services-image {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .services-list h3 {
+        text-align: center;
+    }
+
+    .services-intro {
+        font-size: 1.1rem;
+        padding: 0 20px;
+    }
+}
+
+/* Úprava pro kotvy */
+#co-umime {
     scroll-margin-top: 80px; /* Hodnotu je potřeba přizpůsobit výšce fixní hlavičky */
 }
 
