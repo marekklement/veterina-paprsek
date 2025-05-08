@@ -42,14 +42,14 @@ header .container {
 
 .contact-numbers a {
     text-decoration: none;
-    color: #444;
-    font-weight: 400;
+    color: #97c240; /* Zelená barva */
+    font-weight: 500;
     font-size: 0.95rem;
     margin-bottom: 3px;
 }
 
 .contact-numbers a:hover {
-    color: #007bff;
+    color: #7da732; /* Tmavší zelená při najetí myší */
 }
 
 /* Menu */
@@ -76,7 +76,13 @@ nav .menu li a {
 }
 
 nav .menu li a:hover {
-    color: #007bff;
+    color: #97c240;
+}
+
+/* Aktivní položka menu */
+nav .menu li a.active {
+    color: #97c240;
+    font-weight: 500;
 }
 
 /* Hamburger menu tlačítko - standardně skryté */
@@ -86,6 +92,12 @@ nav .menu li a:hover {
     border: none;
     cursor: pointer;
     padding: 10px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 .hamburger {
@@ -115,10 +127,21 @@ nav .menu li a:hover {
     bottom: -6px;
 }
 
+/* Obecné vylepšení menu pro zabránění překrývání */
+@media (max-width: 1100px) and (min-width: 993px) {
+    nav .menu li {
+        margin-left: 15px; /* Menší mezery při středních obrazovkách */
+    }
+
+    nav .menu li a {
+        font-size: 0.85rem; /* Menší písmo při středních obrazovkách */
+    }
+}
+
 /* Responsivní menu pro mobilní zařízení */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .menu-toggle {
-        display: block;
+        display: flex;
         z-index: 101;
     }
 
@@ -163,12 +186,23 @@ nav .menu li a:hover {
     }
 }
 
+/* Vylepšení pro velmi úzké obrazovky */
+@media (max-width: 350px) {
+    .contact-numbers a {
+        font-size: 0.85rem;
+    }
+
+    nav .menu {
+        width: 100%; /* Plná šířka menu na velmi malých obrazovkách */
+    }
+}
+
 /* Hlavní obsah */
 main {
     padding: 40px 0;
 }
 
-/* Popup - zbytek kódu zůstává stejný */
+/* Popup */
 .popup {
     position: fixed;
     top: 0;
@@ -240,4 +274,127 @@ footer {
     padding: 20px 0;
     margin-top: 40px;
     text-align: center;
+}
+
+/* Obecné styly pro stránky */
+.page-section {
+    margin-bottom: 40px;
+}
+
+.page-section h1 {
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 600;
+}
+
+.page-section p {
+    margin-bottom: 15px;
+}
+
+/* Styly pro domovskou stránku */
+.home-section {
+    margin-bottom: 40px;
+}
+
+.home-section h1 {
+    margin-bottom: 25px;
+    color: #333;
+    font-weight: 600;
+}
+
+.home-section p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+/* Styly pro kontaktní informace */
+.contact-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contact-info h2 {
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-info .address,
+.contact-info .hours {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Styly pro tabulku ordinačních hodin */
+.hours-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.hours-table th,
+.hours-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.hours-table th {
+    font-weight: 600;
+    color: #444;
+}
+
+/* Styly pro aktuality */
+.news-list {
+    margin-top: 30px;
+}
+
+.news-item {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.news-item h2 {
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.news-item .date {
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+/* Přizpůsobení pro mobilní zařízení */
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-section h1,
+    .home-section h1 {
+        font-size: 1.8rem;
+    }
 }
