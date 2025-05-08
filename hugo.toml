@@ -1,0 +1,34 @@
+baseURL = "/"
+languageCode = "cs-cz"
+title = "Veterina Paprsek"
+theme = "veterina"
+
+[menu]
+[[menu.main]]
+name = "Domů"
+url = "/"
+weight = 1
+[[menu.main]]
+name = "O nás"
+url = "/o-nas/"
+weight = 2
+[[menu.main]]
+name = "Co umíme"
+url = "/sluzby/"
+weight = 3
+[[menu.main]]
+name = "Aktuality"
+url = "/aktuality/"
+weight = 4
+[[menu.main]]
+name = "Kolektiv"
+url = "/kolektiv/"
+weight = 5
+[[menu.main]]
+name = "Rozpis služeb"
+url = "/sluzby/rozpis/"
+weight = 6
+[[menu.main]]
+name = "Kontakt & Ordinační hodiny"
+url = "/kontakt/"
+weight = 7

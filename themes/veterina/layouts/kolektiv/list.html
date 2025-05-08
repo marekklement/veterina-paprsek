@@ -1,0 +1,23 @@
+{{ define "main" }}
+<section class="team-section">
+  <div class="container">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+
+    <div class="team-grid">
+      {{ range .Pages.ByParam "weight" }}
+      <div class="team-member">
+        <div class="photo">
+          <img src="{{ .Params.image }}" alt="{{ .Title }}">
+        </div>
+        <h3>{{ .Title }}</h3>
+        <p class="position">{{ .Params.position }}</p>
+        <div class="description">
+          {{ .Content }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

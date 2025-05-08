@@ -1,0 +1,28 @@
+<header>
+  <div class="container">
+    <div class="logo">
+      <a href="/"><img src="/images/logo.png" alt="{{ .Site.Title }}"></a>
+    </div>
+    <nav>
+      <ul>
+        {{ range .Site.Menus.main }}
+        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
+</header>
+
+{{ if .IsHome }}
+{{ with .Site.GetPage "popup" }}
+{{ if .Params.active }}
+<div class="popup" id="main-popup">
+  <div class="popup-content">
+    <span class="close">&times;</span>
+    <h2>{{ .Title }}</h2>
+    {{ .Content }}
+  </div>
+</div>
+{{ end }}
+{{ end }}
+{{ end }}
