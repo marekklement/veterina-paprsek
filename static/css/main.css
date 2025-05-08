@@ -288,18 +288,128 @@ footer {
     margin-bottom: 15px;
 }
 
-/* Styly pro domovskou stránku */
-.home-section {
-    margin-bottom: 40px;
+/* Hero sekce s video pozadím */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
 }
 
-.home-section h1 {
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Bílý overlay s 80% neprůhledností */
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 30px;
+    z-index: 2;
+}
+
+.hero-content .logo {
+    margin-bottom: 30px;
+}
+
+.hero-content .logo img {
+    max-width: 250px;
+    height: auto;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.hero-content .description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #97c240;
+    color: white;
+    border: 2px solid #97c240;
+}
+
+.btn-primary:hover {
+    background-color: #87b230;
+    border-color: #87b230;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 500px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content .description {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Styly pro domovskou stránku - obsah pod hero sekcí */
+.home-content {
+    padding: 60px 0;
+}
+
+.home-content h2 {
     margin-bottom: 25px;
     color: #333;
     font-weight: 600;
 }
 
-.home-section p {
+.home-content p {
     margin-bottom: 15px;
     font-size: 1.1rem;
 }

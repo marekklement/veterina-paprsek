@@ -1,7 +1,28 @@
 {{ define "main" }}
-<section class="home-section">
+<section class="hero-section">
+  <div class="video-background">
+    <video autoplay muted loop playsinline>
+      <source src="/videos/video.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="logo">
+      <img src="/images/logo.png" alt="Veterina Paprsek">
+    </div>
+    <h1>MVDr. František Svozil</h1>
+    <p class="description">Jsme soukromá veterinární klinika s dlouholetou tradicí, která svým rodinným přístupem přináší tu nejlepší péči pro Vaše mazlíčky.</p>
+    <div class="hero-buttons">
+      <a href="/sluzby/rozpis/" class="btn btn-primary">Rozpis služeb</a>
+      <a href="/kontakt/" class="btn btn-primary">Napište nám</a>
+    </div>
+  </div>
+</section>
+
+<section class="home-content">
   <div class="container">
-    <h1>{{ .Title }}</h1>
+    <h2>{{ .Title }}</h2>
     {{ .Content }}
   </div>
 </section>
