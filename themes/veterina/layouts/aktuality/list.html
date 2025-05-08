@@ -10,10 +10,8 @@
         <h2 class="news-item-title">{{ .Title }}</h2>
         <div class="news-item-date">{{ .Date.Format "02.01.2006" }}</div>
         <div class="news-item-content">
-          {{ .Summary }}
-          {{ if .Truncated }}
+          {{ .Content | plainify | truncate 150 }}
           <a href="{{ .Permalink }}" class="news-item-more">Číst více</a>
-          {{ end }}
         </div>
       </div>
       {{ end }}

@@ -104,7 +104,7 @@
       <div class="news-card">
         <h3 class="news-title">{{ .Title }}</h3>
         <div class="news-date">{{ .Date.Format "02.01.2006" }}</div>
-        <div class="news-excerpt">{{ .Summary }}</div>
+        <div class="news-excerpt">{{ .Content | plainify | truncate 150 }}</div>
         <a href="{{ .Permalink }}" class="news-read-more">Číst více</a>
       </div>
       {{ end }}
