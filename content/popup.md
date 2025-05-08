@@ -1,6 +1,6 @@
 ---
-title: "Důležité oznámení"
+title: "Úprava otvírací doby"
 active: true
 ---
 
-Vážení klienti, v období 15-20. června bude ordinace uzavřena z důvodu rekonstrukce. Děkujeme za pochopení.
+Čtvrtek 8.5. - zavřeno

@@ -425,6 +425,85 @@ footer {
     }
 }
 
+/* Sekce O nás */
+.about-section {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.about-image-top {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about-image-top img {
+    max-width: 200px;
+    height: auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.about-content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    line-height: 1.7;
+    color: #444;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 992px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-image {
+        order: -1;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.2rem;
+    }
+}
+
 /* Styly pro domovskou stránku - obsah pod hero sekcí */
 .home-content {
     padding: 60px 0;
