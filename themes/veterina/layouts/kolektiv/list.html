@@ -1,19 +1,21 @@
 {{ define "main" }}
-<section class="team-section">
+<section class="team-list-page">
   <div class="container">
-    <h1>{{ .Title }}</h1>
-    {{ .Content }}
+    <h1 class="section-title">Kolektiv naší kliniky</h1>
+    <div class="section-intro">Seznamte se blíže s členy našeho týmu</div>
 
-    <div class="team-grid">
+    <div class="team-detailed-grid">
       {{ range .Pages.ByParam "weight" }}
-      <div class="team-member">
-        <div class="photo">
+      <div class="team-detailed-item">
+        <div class="team-detailed-photo">
           <img src="{{ .Params.image }}" alt="{{ .Title }}">
         </div>
-        <h3>{{ .Title }}</h3>
-        <p class="position">{{ .Params.position }}</p>
-        <div class="description">
-          {{ .Content }}
+        <div class="team-detailed-info">
+          <h2 class="team-detailed-name">{{ .Title }}</h2>
+          <p class="team-detailed-position">{{ .Params.position }}</p>
+          <div class="team-detailed-description">
+            {{ .Content }}
+          </div>
         </div>
       </div>
       {{ end }}

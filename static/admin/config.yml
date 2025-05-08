@@ -2,10 +2,6 @@ backend:
   name: git-gateway
   branch: master
 
-# Pro lokální testování bez Netlify můžete použít:
-# backend:
-#   name: test-repo
-
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 
@@ -32,3 +28,32 @@ collections:
       - {label: "Pořadí", name: "weight", widget: "number", default: 100}
       - {label: "Fotografie", name: "image", widget: "image"}
       - {label: "Popis", name: "body", widget: "markdown"}
+
+  - name: "aktuality"
+    label: "Aktuality"
+    folder: "content/aktuality"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Titulek", name: "title", widget: "string"}
+      - {label: "Datum publikování", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
+      - {label: "Popis pro SEO", name: "description", widget: "text", required: false}
+      - {label: "Obsah", name: "body", widget: "markdown"}
+      - {label: "Obrázek", name: "image", widget: "image", required: false}
+
+  - name: "rozpis-sluzeb"
+    label: "Rozpis služeb"
+    files:
+      - name: "sluzby"
+        label: "Rozpis služeb"
+        file: "data/sluzby.json"
+        fields:
+          - label: "Dny"
+            name: "days"
+            widget: "list"
+            fields:
+              - {label: "Den", name: "den", widget: "string"}
+              - label: "Doktoři"
+                name: "doktori"
+                widget: "list"
+                field: {label: "Doktor", name: "doktor", widget: "string"}

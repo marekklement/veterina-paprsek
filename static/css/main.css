@@ -1,3 +1,8 @@
+/* Přizpůsobení kotev s ohledem na fixní hlavičku */
+#domu, #o-nas, #co-umime, #aktuality, #kolektiv, #rozpis-sluzeb, #klienti {
+    scroll-margin-top: 80px; /* Hodnotu je potřeba přizpůsobit výšce fixní hlavičky */
+}
+
 /* Základní reset */
 * {
     margin: 0;
@@ -10,107 +15,6 @@ body {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
     color: #333;
-}
-
-/* Sekce Co umíme */
-.services-section {
-    padding: 80px 0;
-    background-color: #f5f9f0; /* Lehce zelenkavé pozadí */
-}
-
-.services-image-top {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.services-image-top img {
-    max-width: 180px;
-    height: auto;
-}
-
-.services-intro {
-    text-align: center;
-    font-size: 1.2rem;
-    color: #555;
-    max-width: 800px;
-    margin: 0 auto 50px;
-    line-height: 1.7;
-}
-
-.services-content {
-    display: grid;
-    grid-template-columns: 0.8fr 1fr 1fr; /* Změněno z 1fr 1fr 1fr na 0.8fr 1fr 1fr pro menší sloupec s obrázkem */
-    gap: 70px; /* Zvětšeno z 50px na 70px pro ještě větší mezeru mezi sloupci */
-    align-items: start;
-}
-
-.services-image {
-    max-width: 90%; /* Omezení šířky obrázku na 90% jeho kontejneru */
-}
-
-.services-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.services-list h3 {
-    font-size: 1.2rem; /* Zmenšeno z 1.3rem */
-    color: #444;
-    margin-bottom: 20px;
-    font-weight: 600;
-}
-
-.services-list ul {
-    padding-left: 20px;
-}
-
-.services-list li {
-    margin-bottom: 8px; /* Zmenšeno z 10px */
-    position: relative;
-    list-style-type: none;
-    padding-left: 15px;
-    font-size: 0.9rem; /* Zmenšeno písmo v odrážkách */
-    line-height: 1.5;
-}
-
-.services-list li:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 8px; /* Upraveno pro zarovnání s menším textem */
-    width: 5px; /* Zmenšeno z 6px */
-    height: 5px; /* Zmenšeno z 6px */
-    border-radius: 50%;
-    background-color: #97c240; /* Zelená barva odrážek */
-}
-
-/* Responzivní úpravy pro sekci Co umíme */
-@media (max-width: 992px) {
-    .services-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .services-image {
-        max-width: 400px; /* Omezení maximální šířky obrázku na mobilních zařízeních */
-        margin: 0 auto;
-    }
-
-    .services-list h3 {
-        text-align: center;
-    }
-
-    .services-intro {
-        font-size: 1.1rem;
-        padding: 0 20px;
-    }
-}
-
-/* Úprava pro kotvy */
-#co-umime {
-    scroll-margin-top: 80px; /* Hodnotu je potřeba přizpůsobit výšce fixní hlavičky */
 }
 
 .container {
@@ -325,7 +229,7 @@ nav .menu li a.active {
 
 /* Hlavní obsah */
 main {
-    padding: 40px 0;
+    padding: 0;
 }
 
 /* Popup */
@@ -527,22 +431,7 @@ footer {
     }
 }
 
-/* Sekce O nás */
-.about-section {
-    padding: 80px 0;
-    background-color: #f9f9f9;
-}
-
-.about-image-top {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.about-image-top img {
-    max-width: 200px;
-    height: auto;
-}
-
+/* Společné styly pro všechny sekce */
 .section-title {
     text-align: center;
     font-size: 2.2rem;
@@ -559,6 +448,108 @@ footer {
     margin-bottom: 40px;
 }
 
+/* Společný styl pro intro texty v sekcích */
+.section-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    line-height: 1.7;
+}
+
+/* Společné styly pro obsahové bloky */
+.section-content {
+    margin-bottom: 40px;
+}
+
+/* Standardní text v sekcích */
+.section-text p {
+    margin-bottom: 20px;
+    line-height: 1.7;
+    color: #444;
+}
+
+/* Společné styly pro odrážkové seznamy */
+.list-section h3 {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 20px;
+    font-weight: 600;
+    position: relative;
+}
+
+/* Odstraňujeme odrážku před nadpisem, ale zachováváme zarovnání */
+.list-section h3:before {
+    display: none;
+}
+
+.list-section ul {
+    padding-left: 0; /* Odstraňujeme výchozí padding */
+}
+
+.list-section li {
+    margin-bottom: 8px;
+    position: relative;
+    list-style-type: none;
+    padding-left: 15px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.list-section li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #97c240;
+}
+
+/* Responzivní úpravy pro všechny sekce */
+@media (max-width: 992px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .section-intro {
+        font-size: 1.1rem;
+        padding: 0 20px;
+    }
+
+    .list-section h3 {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .list-section ul {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+/* Sekce O nás */
+.about-section {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.about-image-top {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about-image-top img {
+    max-width: 200px;
+    height: auto;
+}
+
 .about-content {
     display: flex;
     gap: 40px;
@@ -567,12 +558,7 @@ footer {
 
 .about-text {
     flex: 1;
-}
-
-.about-text p {
-    margin-bottom: 20px;
-    line-height: 1.7;
-    color: #444;
+    font-size: 14px;
 }
 
 .about-image {
@@ -596,13 +582,54 @@ footer {
         margin-bottom: 30px;
         width: 100%;
     }
+}
 
-    .section-title {
-        font-size: 1.8rem;
+/* Sekce Co umíme */
+.services-section {
+    padding: 80px 0;
+    background-color: #f5f9f0; /* Lehce zelenkavé pozadí */
+}
+
+.services-image-top {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.services-image-top img {
+    max-width: 180px;
+    height: auto;
+}
+
+.services-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Změněno zpět na rovnoměrné sloupce */
+    gap: 90px;
+    align-items: start;
+    margin-left: 40px;
+}
+
+.services-image {
+    max-width: 100%; /* Obrázek může využít celou šířku sloupce */
+}
+
+.services-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Responzivní úpravy pro sekci Co umíme */
+@media (max-width: 992px) {
+    .services-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-left: 0;
     }
 
-    .section-subtitle {
-        font-size: 1.2rem;
+    .services-image {
+        max-width: 450px; /* Zvětšujeme maximální šířku obrázku na mobilních zařízeních */
+        margin: 0 auto;
     }
 }
 
@@ -672,30 +699,6 @@ footer {
     color: #444;
 }
 
-/* Styly pro aktuality */
-.news-list {
-    margin-top: 30px;
-}
-
-.news-item {
-    padding: 20px;
-    margin-bottom: 20px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-.news-item h2 {
-    margin-bottom: 10px;
-    color: #444;
-}
-
-.news-item .date {
-    color: #777;
-    font-size: 0.9rem;
-    margin-bottom: 15px;
-}
-
 /* Přizpůsobení pro mobilní zařízení */
 @media (max-width: 768px) {
     .team-grid {
@@ -711,5 +714,562 @@ footer {
     .page-section h1,
     .home-section h1 {
         font-size: 1.8rem;
+    }
+}
+
+/* Sekce Aktuality */
+.news-section {
+    position: relative;
+    padding: 80px 0;
+    color: #fff;
+}
+
+.news-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.parallax-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/images/paralax3.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+.news-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Tmavý overlay pro lepší čitelnost textu */
+    z-index: 1;
+}
+
+.news-section .section-title,
+.news-section .section-subtitle {
+    color: #fff;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 50px 0;
+}
+
+.news-card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 320px; /* Fixní výška */
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #97c240; /* Zelený rámeček */
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.news-title {
+    color: #333;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 20px 20px 10px;
+}
+
+.news-date {
+    color: #97c240;
+    font-size: 0.85rem;
+    padding: 0 20px 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.news-excerpt {
+    color: #555;
+    padding: 15px 20px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    flex-grow: 1;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Omezení na 4 řádky textu */
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+
+.news-read-more {
+    display: block;
+    text-align: right;
+    padding: 10px 20px 20px;
+    color: #97c240;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.news-read-more:hover {
+    text-decoration: underline;
+}
+
+.news-button-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Responzivní úpravy pro sekci Aktuality */
+@media (max-width: 992px) {
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .news-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Styly pro stránku se seznamem aktualit */
+.news-list-page {
+    padding: 80px 0;
+}
+
+.news-items {
+    margin-top: 40px;
+}
+
+.news-item {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    padding: 25px;
+    border-left: 4px solid #97c240;
+}
+
+.news-item-title {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.news-item-date {
+    color: #97c240;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.news-item-content {
+    color: #555;
+    line-height: 1.7;
+}
+
+.news-item-more {
+    display: inline-block;
+    margin-top: 15px;
+    color: #97c240;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.news-item-more:hover {
+    text-decoration: underline;
+}
+
+/* Styly pro stránku s detailem aktuality */
+.news-detail-page {
+    padding: 80px 0;
+}
+
+.news-detail-date {
+    color: #97c240;
+    font-size: 1rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.news-detail-content {
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 40px;
+}
+
+.news-detail-content p {
+    margin-bottom: 20px;
+}
+
+.news-detail-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.news-detail-nav {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Sekce Kolektiv */
+.team-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.team-image-top {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.team-image-top img {
+    max-width: 180px;
+    height: auto;
+}
+
+.team-members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 30px;
+    margin: 50px 0;
+}
+
+.team-member-card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.team-member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.team-member-photo {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%; /* Zajistí čtvercový poměr stran */
+    position: relative;
+    overflow: hidden;
+}
+
+.team-member-photo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin: 15px 0 5px;
+    padding: 0 15px;
+}
+
+.team-member-position {
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+    margin: 0 0 15px;
+    padding: 0 15px;
+}
+
+.team-button-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Responzivní úpravy pro sekci Kolektiv */
+@media (max-width: 992px) {
+    .team-members-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .team-members-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .team-members-grid {
+        grid-template-columns: 1fr;
+        max-width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Styly pro stránku s kolektivem */
+.team-list-page {
+    padding: 80px 0;
+}
+
+.team-detailed-grid {
+    margin-top: 40px;
+}
+
+.team-detailed-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 50px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    padding: 30px;
+}
+
+.team-detailed-photo {
+    flex: 0 0 250px;
+}
+
+.team-detailed-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.team-detailed-info {
+    flex: 1;
+}
+
+.team-detailed-name {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.team-detailed-position {
+    font-size: 1.1rem;
+    color: #97c240;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.team-detailed-description {
+    line-height: 1.7;
+    color: #444;
+}
+
+/* Responzivní úpravy pro stránku s kolektivem */
+@media (max-width: 768px) {
+    .team-detailed-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .team-detailed-photo {
+        flex: none;
+        width: 200px;
+    }
+
+    .team-detailed-description {
+        text-align: left;
+    }
+}
+
+/* Sekce Rozpis služeb */
+.schedule-section {
+    padding: 80px 0;
+    background-color: #f5f9f0; /* Stejné pozadí jako Co umíme */
+}
+
+.schedule-image-top {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.schedule-image-top img {
+    max-width: 180px;
+    height: auto;
+}
+
+.emergency-note {
+    color: #d9534f !important; /* Červený text pro podnadpis s kontaktem */
+    font-weight: 500;
+}
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 15px;
+    margin: 50px 0 30px;
+}
+
+.schedule-day {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 100%;
+}
+
+.schedule-day:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.day-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #97c240;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.doctors-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.doctor {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Responzivní úpravy pro sekci Rozpis služeb */
+@media (max-width: 992px) {
+    .schedule-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .schedule-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .schedule-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Sekce Naši klienti */
+.clients-section {
+    display: flex;
+    width: 100%;
+    min-height: 450px;
+    background-color: #fff;
+}
+
+.clients-image {
+    flex: 1;
+    overflow: hidden;
+}
+
+.clients-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.clients-stats {
+    flex: 1;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.clients-stats .section-title {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.stats-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 600px;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.stat-label {
+    flex: 0 0 100px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #444;
+    text-align: right;
+}
+
+.stat-bar {
+    flex: 1;
+    height: 15px;
+    background-color: #e9ecef;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.stat-fill {
+    height: 100%;
+    width: 0; /* Začíná na 0 a animuje se na požadovanou hodnotu */
+    background-color: #97c240;
+    border-radius: 20px;
+    transition: width 1.5s ease-out;
+}
+
+.stat-value {
+    flex: 0 0 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #97c240;
+}
+
+/* Responzivní úpravy pro sekci Naši klienti */
+@media (max-width: 992px) {
+    .clients-section {
+        flex-direction: column;
+    }
+
+    .clients-image {
+        height: 300px;
+    }
+
+    .clients-stats {
+        padding: 40px 20px;
+    }
+
+    .clients-stats .section-title {
+        text-align: center;
+    }
+
+    .stats-container {
+        margin: 0 auto;
     }
 }

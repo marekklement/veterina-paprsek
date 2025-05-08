@@ -18,15 +18,15 @@ url = "/#co-umime"
 weight = 3
 [[menu.main]]
 name = "Aktuality"
-url = "/aktuality/"
+url = "/#aktuality"
 weight = 4
 [[menu.main]]
 name = "Kolektiv"
-url = "/kolektiv/"
+url = "/#kolektiv"
 weight = 5
 [[menu.main]]
 name = "Rozpis služeb"
-url = "/sluzby/rozpis/"
+url = "/#rozpis-sluzeb"
 weight = 6
 [[menu.main]]
 name = "Kontakt & Ordinační hodiny"

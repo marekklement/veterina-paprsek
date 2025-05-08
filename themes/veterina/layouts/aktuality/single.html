@@ -1,0 +1,16 @@
+{{ define "main" }}
+<section class="news-detail-page">
+  <div class="container">
+    <h1 class="section-title">{{ .Title }}</h1>
+    <div class="news-detail-date">{{ .Date.Format "02.01.2006" }}</div>
+
+    <div class="news-detail-content">
+      {{ .Content }}
+    </div>
+
+    <div class="news-detail-nav">
+      <a href="/aktuality/" class="btn btn-primary">Zpět na přehled aktualit</a>
+    </div>
+  </div>
+</section>
+{{ end }}

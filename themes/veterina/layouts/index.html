@@ -14,7 +14,7 @@
     <h1>MVDr. František Svozil</h1>
     <p class="description">Jsme soukromá veterinární klinika s dlouholetou tradicí, která svým rodinným přístupem přináší tu nejlepší péči pro Vaše mazlíčky.</p>
     <div class="hero-buttons">
-      <a href="/sluzby/rozpis/" class="btn btn-primary">Rozpis služeb</a>
+      <a href="#rozpis-sluzeb" class="btn btn-primary">Rozpis služeb</a>
       <a href="/kontakt/" class="btn btn-primary">Napište nám</a>
     </div>
   </div>
@@ -30,7 +30,7 @@
     <h3 class="section-subtitle">Veterinární klinika s rodinným přístupem k pacientům</h3>
 
     <div class="about-content">
-      <div class="about-text">
+      <div class="about-text section-text">
         <p>Veterinární klinika Paprsek byla založena v roce 1995, tu pravou tvář však získala v roce 2008, kdy ji do své péče převzal MVDr. František Svozil. Původní prostory se nacházely v obchodním centru Paprsek. Tyto prostory však po čase přestaly vyhovovat našim potřebám a zejména potřebám našich klientů. Z tohoto důvodu se klinika přestěhovala v roce 2014 do nových nynějších prostor.</p>
         <p>Naše klinika se nachází v blízkosti metra Stodůlky na kraji vilové oblasti směrem k poliklinice Stodůlky. Součástí kliniky je také zahrada, na které si můžete Vy a Vaši miláčci zpestřit návštěvu u nás. Klinika je tvořena menší čekárnou, dvěma ordinacemi, RTG místností, operačním sálem a hospitalizací.</p>
         <p>Při Vaší návštěvě můžete potkat také naše „domácí chlupaté pomocníky".</p>
@@ -49,7 +49,7 @@
     </div>
 
     <h2 class="section-title">Co umíme</h2>
-    <p class="services-intro">
+    <p class="section-intro">
       Naše klinika se zaměřuje především na malá zvířata, jako jsou psi, kočky, fretky a veškeré mále hlodavce.
       Náš personál se pravidelně účastní vzdělávacích seminářů a školení, které zvyšují jejich odbornost.
     </p>
@@ -59,7 +59,7 @@
         <img src="/images/co_umime-700x700.jpg" alt="Naše služby">
       </div>
 
-      <div class="services-list main-services">
+      <div class="services-list main-services list-section">
         <h3>Hlavní činností naší kliniky je:</h3>
         <ul>
           <li>interní medicína psů a koček</li>
@@ -74,7 +74,7 @@
         </ul>
       </div>
 
-      <div class="services-list additional-services">
+      <div class="services-list additional-services list-section">
         <h3>Další služby:</h3>
         <ul>
           <li>vystavení pasů</li>
@@ -85,6 +85,127 @@
           <li>doplňkový prodej</li>
           <li>čipování</li>
         </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="aktuality" class="news-section">
+  <div class="parallax-background">
+    <div class="overlay"></div>
+  </div>
+  <div class="container">
+    <h2 class="section-title">Aktuality</h2>
+    <h3 class="section-subtitle">Zde se můžete dočíst, co je u nás nového, co se podařilo a co se u nás konalo.</h3>
+
+    <div class="news-grid">
+      {{ $news := where .Site.RegularPages "Section" "aktuality" }}
+      {{ range first 5 $news.ByDate.Reverse }}
+      <div class="news-card">
+        <h3 class="news-title">{{ .Title }}</h3>
+        <div class="news-date">{{ .Date.Format "02.01.2006" }}</div>
+        <div class="news-excerpt">{{ .Summary }}</div>
+        <a href="{{ .Permalink }}" class="news-read-more">Číst více</a>
+      </div>
+      {{ end }}
+    </div>
+
+    <div class="news-button-container">
+      <a href="/aktuality/" class="btn btn-primary">Všechny aktuality</a>
+    </div>
+  </div>
+</section>
+
+<section id="kolektiv" class="team-section">
+  <div class="container">
+    <div class="team-image-top">
+      <img src="/images/team.png" alt="Kolektiv kliniky">
+    </div>
+
+    <h2 class="section-title">Kolektiv naší kliniky</h2>
+    <h3 class="section-subtitle">Na koho se ve Veterině Paprsek můžete těšit..</h3>
+
+    <div class="team-members-grid">
+      {{ $team := where .Site.RegularPages "Section" "kolektiv" }}
+      {{ range $team.ByParam "weight" }}
+      <div class="team-member-card">
+        <div class="team-member-photo">
+          <img src="{{ .Params.image }}" alt="{{ .Title }}">
+        </div>
+        <h3 class="team-member-name">{{ .Title }}</h3>
+        <p class="team-member-position">{{ .Params.position }}</p>
+      </div>
+      {{ end }}
+    </div>
+
+    <div class="team-button-container">
+      <a href="/kolektiv/" class="btn btn-primary">Zobrazit více informací</a>
+    </div>
+  </div>
+</section>
+
+<section id="rozpis-sluzeb" class="schedule-section">
+  <div class="container">
+    <div class="schedule-image-top">
+      <img src="/images/team.png" alt="Rozpis služeb">
+    </div>
+
+    <h2 class="section-title">Rozpis služeb</h2>
+    <h3 class="section-subtitle emergency-note">Pro objednání volejte přímo do ordinace na tel. čísla 777 033 353, 235 518 764 nebo email ordinace@veterinapaprsek.cz</h3>
+
+    <div class="schedule-grid">
+      {{ range .Site.Data.sluzby }}
+      <div class="schedule-day">
+        <h3 class="day-name">{{ .den }}</h3>
+        <div class="doctors-list">
+          {{ range .doktori }}
+          <div class="doctor">{{ . }}</div>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section id="klienti" class="clients-section">
+  <div class="clients-image">
+    <img src="/images/psi-kocky.jpg" alt="Naši klienti">
+  </div>
+  <div class="clients-stats">
+    <h2 class="section-title">Naši „klienti"</h2>
+
+    <div class="stats-container">
+      <div class="stat-item">
+        <div class="stat-label">Psi</div>
+        <div class="stat-bar">
+          <div class="stat-fill" data-percentage="76"></div>
+        </div>
+        <div class="stat-value">76%</div>
+      </div>
+
+      <div class="stat-item">
+        <div class="stat-label">Kočky</div>
+        <div class="stat-bar">
+          <div class="stat-fill" data-percentage="15"></div>
+        </div>
+        <div class="stat-value">15%</div>
+      </div>
+
+      <div class="stat-item">
+        <div class="stat-label">Hlodavci</div>
+        <div class="stat-bar">
+          <div class="stat-fill" data-percentage="6"></div>
+        </div>
+        <div class="stat-value">6%</div>
+      </div>
+
+      <div class="stat-item">
+        <div class="stat-label">Ostatní</div>
+        <div class="stat-bar">
+          <div class="stat-fill" data-percentage="3"></div>
+        </div>
+        <div class="stat-value">3%</div>
       </div>
     </div>
   </div>

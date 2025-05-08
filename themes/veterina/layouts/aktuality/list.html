@@ -1,0 +1,23 @@
+{{ define "main" }}
+<section class="news-list-page">
+  <div class="container">
+    <h1 class="section-title">Aktuality</h1>
+    <div class="section-intro">Přehled všech aktualit z naší veterinární kliniky</div>
+
+    <div class="news-items">
+      {{ range .Pages.ByDate.Reverse }}
+      <div class="news-item">
+        <h2 class="news-item-title">{{ .Title }}</h2>
+        <div class="news-item-date">{{ .Date.Format "02.01.2006" }}</div>
+        <div class="news-item-content">
+          {{ .Summary }}
+          {{ if .Truncated }}
+          <a href="{{ .Permalink }}" class="news-item-more">Číst více</a>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
