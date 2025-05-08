@@ -6,11 +6,11 @@ theme = "veterina"
 [menu]
 [[menu.main]]
 name = "Domů"
-url = "/"
+url = "/#domu"
 weight = 1
 [[menu.main]]
 name = "O nás"
-url = "/o-nas/"
+url = "/#o-nas"
 weight = 2
 [[menu.main]]
 name = "Co umíme"
