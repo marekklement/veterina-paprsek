@@ -79,6 +79,10 @@ document.addEventListener('DOMContentLoaded', function() {
             item.addEventListener('click', () => {
                 menu.classList.remove('active');
                 menuToggle.classList.remove('active');
+
+                // Přidání active class na kliknutou položku menu
+                menuItems.forEach(menuItem => menuItem.classList.remove('active'));
+                item.classList.add('active');
             });
         });
 
@@ -90,6 +94,42 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    // Funkce pro zvýraznění menu položky podle aktuální sekce
+    function highlightMenuOnScroll() {
+        // Získání všech sekcí a menu položek
+        const sections = document.querySelectorAll('#home, #onas, #coumime, #aktuality, #kolektiv, #rozpis, #kontakt');
+        const menuItems = document.querySelectorAll('.menu a');
+
+        if (sections.length === 0 || menuItems.length === 0) return;
+
+        // Kontrola, která sekce je aktuálně viditelná
+        let currentSectionId = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            if (window.scrollY >= (sectionTop - 100) && window.scrollY < (sectionTop + sectionHeight - 100)) {
+                currentSectionId = section.getAttribute('id');
+            }
+        });
+
+        // Zvýraznění odpovídající položky menu
+        if (currentSectionId) {
+            menuItems.forEach(item => {
+                item.classList.remove('active');
+                const href = item.getAttribute('href');
+                if (href && href.includes('#' + currentSectionId)) {
+                    item.classList.add('active');
+                }
+            });
+        }
+    }
+
+    // Přidání event listeneru pro scroll
+    window.addEventListener('scroll', highlightMenuOnScroll);
+
+    // Inicializace při načtení stránky
+    highlightMenuOnScroll();
 
     // Inicializace animace procentuálních grafů
     animateStats();
