@@ -2,31 +2,45 @@
   "sluzby": [
     {
       "den": "Pondělí",
-      "doktori": ["MVDr. František Svozil", "MVDr. Jana Konečná"]
+      "doktori": [
+        "MVDr. František Svozil"
+      ]
     },
     {
       "den": "Úterý",
-      "doktori": ["MVDr. František Svozil", "MVDr. Petr Novák"]
+      "doktori": [
+        "MVDr. František Svozil"
+      ]
     },
     {
       "den": "Středa",
-      "doktori": ["MVDr. Jana Konečná", "MVDr. Lucie Svobodová"]
+      "doktori": [
+        "MVDr. František Svozil"
+      ]
     },
     {
       "den": "Čtvrtek",
-      "doktori": ["MVDr. František Svozil", "MVDr. Jana Konečná"]
+      "doktori": [
+        "MVDr. František Svozil"
+      ]
     },
     {
       "den": "Pátek",
-      "doktori": ["MVDr. Petr Novák", "MVDr. Lucie Svobodová"]
+      "doktori": [
+        "MVDr. František Svozil"
+      ]
     },
     {
       "den": "Sobota",
-      "doktori": ["MVDr. František Svozil"]
+      "doktori": [
+        "MVDr. František Svozil"
+      ]
     },
     {
       "den": "Neděle",
-      "doktori": ["Zavřeno"]
+      "doktori": [
+        "Zavřeno"
+      ]
     }
   ]
 }
