@@ -48,12 +48,12 @@ collections:
         label: "Rozpis služeb"
         file: "data/sluzby.json"
         fields:
-          - label: "Dny"
-            name: "days"
+          - label: "Rozpis podle dnů"
+            name: "sluzby"
             widget: "list"
             fields:
-              - {label: "Den", name: "den", widget: "string"}
+              - { label: "Den", name: "den", widget: "string" }
               - label: "Doktoři"
                 name: "doktori"
                 widget: "list"
-                field: {label: "Doktor", name: "doktor", widget: "string"}
+                field: { label: "Jméno", name: "jmeno", widget: "string" }

@@ -1,30 +1,32 @@
-[
-  {
-    "den": "Pondělí",
-    "doktori": ["MVDr. František Svozil", "MVDr. Jana Konečná"]
-  },
-  {
-    "den": "Úterý",
-    "doktori": ["MVDr. František Svozil", "MVDr. Petr Novák"]
-  },
-  {
-    "den": "Středa",
-    "doktori": ["MVDr. Jana Konečná", "MVDr. Lucie Svobodová"]
-  },
-  {
-    "den": "Čtvrtek",
-    "doktori": ["MVDr. František Svozil", "MVDr. Jana Konečná"]
-  },
-  {
-    "den": "Pátek",
-    "doktori": ["MVDr. Petr Novák", "MVDr. Lucie Svobodová"]
-  },
-  {
-    "den": "Sobota",
-    "doktori": ["MVDr. František Svozil"]
-  },
-  {
-    "den": "Neděle",
-    "doktori": ["Zavřeno"]
-  }
-]
+{
+  "sluzby": [
+    {
+      "den": "Pondělí",
+      "doktori": ["MVDr. František Svozil", "MVDr. Jana Konečná"]
+    },
+    {
+      "den": "Úterý",
+      "doktori": ["MVDr. František Svozil", "MVDr. Petr Novák"]
+    },
+    {
+      "den": "Středa",
+      "doktori": ["MVDr. Jana Konečná", "MVDr. Lucie Svobodová"]
+    },
+    {
+      "den": "Čtvrtek",
+      "doktori": ["MVDr. František Svozil", "MVDr. Jana Konečná"]
+    },
+    {
+      "den": "Pátek",
+      "doktori": ["MVDr. Petr Novák", "MVDr. Lucie Svobodová"]
+    },
+    {
+      "den": "Sobota",
+      "doktori": ["MVDr. František Svozil"]
+    },
+    {
+      "den": "Neděle",
+      "doktori": ["Zavřeno"]
+    }
+  ]
+}
