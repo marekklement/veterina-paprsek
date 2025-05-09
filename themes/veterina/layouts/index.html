@@ -128,9 +128,12 @@
     <div class="team-members-grid">
       {{ $team := where .Site.RegularPages "Section" "kolektiv" }}
       {{ range $team.ByParam "weight" }}
-      <div class="team-member-card">
+      <div class="team-member-card{{ if not (default true .Params.active) }} inactive-member{{ end }}">
         <div class="team-member-photo">
           <img src="{{ .Params.image }}" alt="{{ .Title }}">
+          {{ if not (default true .Params.active) }}
+          <div class="inactive-reason">{{ .Params.inactiveReason }}</div>
+          {{ end }}
         </div>
         <h3 class="team-member-name">{{ .Title }}</h3>
         <p class="team-member-position">{{ .Params.position }}</p>

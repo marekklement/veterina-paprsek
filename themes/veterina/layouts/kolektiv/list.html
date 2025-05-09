@@ -6,13 +6,19 @@
 
     <div class="team-detailed-grid">
       {{ range .Pages.ByParam "weight" }}
-      <div class="team-detailed-item">
+      <div class="team-detailed-item{{ if not (default true .Params.active) }} inactive-member{{ end }}">
         <div class="team-detailed-photo">
           <img src="{{ .Params.image }}" alt="{{ .Title }}">
+          {{ if not (default true .Params.active) }}
+          <div class="inactive-reason-badge">{{ .Params.inactiveReason }}</div>
+          {{ end }}
         </div>
         <div class="team-detailed-info">
           <h2 class="team-detailed-name">{{ .Title }}</h2>
           <p class="team-detailed-position">{{ .Params.position }}</p>
+          {{ if not (default true .Params.active) }}
+          <p class="inactive-status">Momentálně nepřítomen: {{ .Params.inactiveReason }}</p>
+          {{ end }}
           <div class="team-detailed-description">
             {{ .Content }}
           </div>

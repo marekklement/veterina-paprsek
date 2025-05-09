@@ -30,6 +30,8 @@ collections:
       - {label: "Pozice", name: "position", widget: "string"}
       - {label: "Pořadí", name: "weight", widget: "number", default: 100}
       - {label: "Fotografie", name: "image", widget: "image"}
+      - { label: "Aktivní", name: "active", widget: "boolean", default: true }
+      - { label: "Důvod neaktivity", name: "inactiveReason", widget: "string", required: false, hint: "Vyplňte pouze pokud je pracovník neaktivní (např. dovolená, nemoc)" }
       - {label: "Popis", name: "body", widget: "markdown"}
 
   - name: "aktuality"

@@ -1400,3 +1400,46 @@ footer {
 .map-container iframe {
     display: block;
 }
+
+/* Styly pro neaktivní členy týmu */
+.inactive-member {
+    opacity: 0.6;
+    position: relative;
+}
+
+.team-member-card.inactive-member .team-member-photo {
+    position: relative;
+}
+
+.inactive-reason {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 8px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.inactive-reason-badge {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: #d9534f;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.85rem;
+}
+
+.inactive-status {
+    color: #d9534f;
+    font-style: italic;
+    margin-bottom: 15px;
+    padding: 5px 10px;
+    background-color: rgba(217, 83, 79, 0.1);
+    border-radius: 3px;
+    display: inline-block;
+}
