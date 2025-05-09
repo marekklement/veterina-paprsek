@@ -26,7 +26,7 @@ const customCzechTranslation = {
         collectionTop: {
             sortBy: 'Seřadit podle',
             viewAs: 'Zobrazit jako',
-            newButton: 'Nový %{collectionLabel}',
+            newButton: 'Vytvořit novou položku',
             ascending: 'Vzestupně',
             descending: 'Sestupně',
             searchResults: 'Výsledky vyhledávání pro "%{searchTerm}"',

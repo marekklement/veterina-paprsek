@@ -1,17 +1,18 @@
 ---
-title: "Nové vybavení na klinice"
-date: 2025-04-20
-description: "Naše klinika se rozšířila o nové diagnostické vybavení pro lepší péči o vaše mazlíčky."
+title: "Jarní vakcinace - důležité upozornění"
+date: 2025-04-15
+description: "Přichází jaro a s ním i čas na pravidelné očkování vašich domácích mazlíčků."
 ---
 
-S radostí vám oznamujeme, že jsme na naší klinice pořídili nové diagnostické vybavení, které nám umožní poskytovat ještě kvalitnější péči vašim zvířecím kamarádům.
+Vážení klienti,
 
-Mezi nové vybavení patří:
+s příchodem jara bychom vás rádi upozornili na důležitost očkování vašich domácích mazlíčků. Obzvláště důležité je očkování proti vzteklině, které je ze zákona povinné pro všechny psy starší 3 měsíců.
 
-- Nový ultrazvukový přístroj s vyšším rozlišením
-- Modernizovaný RTG s digitálním zobrazením
-- Nová laboratoř pro rychlejší analýzu krve
+Kromě povinného očkování proti vzteklině nabízíme také komplexní vakcinační programy pro psy i kočky, které chrání před nejčastějšími infekčními onemocněními.
 
-Díky těmto novým přístrojům budeme schopni rychleji a přesněji diagnostikovat různá onemocnění a poskytnout vašim mazlíčkům tu nejlepší péči.
+Pro objednání termínu očkování nás kontaktujte telefonicky nebo emailem.
 
-Těšíme se na vaši návštěvu!
+Děkujeme, že se staráte o zdraví vašich zvířecích kamarádů!
+
+S pozdravem
+Tým veterinární kliniky Paprsek
