@@ -56,9 +56,11 @@ collections:
           - label: "Rozpis podle dnů"
             name: "sluzby"
             widget: "list"
+            allow_add: false
             fields:
               - { label: "Den", name: "den", widget: "string" }
               - label: "Doktoři"
                 name: "doktori"
                 widget: "list"
+                label_singular: "doktora"
                 field: { label: "Jméno", name: "jmeno", widget: "string" }

@@ -17,7 +17,7 @@
           <h2 class="team-detailed-name">{{ .Title }}</h2>
           <p class="team-detailed-position">{{ .Params.position }}</p>
           {{ if not (default true .Params.active) }}
-          <p class="inactive-status">Momentálně nepřítomen: {{ .Params.inactiveReason }}</p>
+          <p class="inactive-status">Absence: {{ .Params.inactiveReason }}</p>
           {{ end }}
           <div class="team-detailed-description">
             {{ .Content }}

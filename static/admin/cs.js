@@ -41,6 +41,12 @@ const customCzechTranslation = {
         },
     },
     editor: {
+        editorWidgets: {
+            list: {
+                add: 'Přidat %{item}',
+                addType: 'Přidat nového %{item}',
+            }
+        },
         editorControl: {
             field: {
                 optional: 'volitelné',
