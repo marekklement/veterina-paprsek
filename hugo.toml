@@ -17,15 +17,15 @@ address = "Hostinského 1076/8, 155 00 Praha 5"
 [menu]
 [[menu.main]]
 name = "Domů"
-url = "/#domu"
+url = "/#home"
 weight = 1
 [[menu.main]]
 name = "O nás"
-url = "/#o-nas"
+url = "/#onas"
 weight = 2
 [[menu.main]]
 name = "Co umíme"
-url = "/#co-umime"
+url = "/#coumime"
 weight = 3
 [[menu.main]]
 name = "Aktuality"
@@ -37,7 +37,7 @@ url = "/#kolektiv"
 weight = 5
 [[menu.main]]
 name = "Rozpis služeb"
-url = "/#rozpis-sluzeb"
+url = "/#rozpis"
 weight = 6
 [[menu.main]]
 name = "Kontakt & Ordinační hodiny"

@@ -1,5 +1,5 @@
 /* Přizpůsobení kotev s ohledem na fixní hlavičku */
-#domu, #o-nas, #co-umime, #aktuality, #kolektiv, #rozpis-sluzeb, #klienti, #kontakt, #mapa {
+#home, #onas, #coumime, #aktuality, #kolektiv, #rozpis, #klienti, #kontakt, #mapa {
     scroll-margin-top: 80px; /* Hodnotu je potřeba přizpůsobit výšce fixní hlavičky */
 }
 
