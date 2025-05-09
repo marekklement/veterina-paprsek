@@ -1446,6 +1446,17 @@ footer {
     margin-bottom: 8px;
 }
 
+/* Styly pro odkazy v kontaktní sekci */
+.contact-section .contact-column p a {
+    text-decoration: none !important;
+    color: #97c240 !important; /* Zelená barva stejná jako v hlavičce */
+    font-weight: 500 !important;
+}
+
+.contact-section .contact-column p a:hover {
+    color: #7da732 !important; /* Tmavší zelená při najetí myší */
+}
+
 /* Responzivní úpravy pro sekci Kontakt */
 @media (max-width: 992px) {
     .contact-columns {
