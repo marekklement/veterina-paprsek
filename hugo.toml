@@ -1,7 +1,18 @@
-baseURL = "/"
+baseURL = "https://veterinapaprsek.cz/"
 languageCode = "cs-cz"
-title = "Veterina Paprsek"
+title = "Veterina Paprsek | Veterinární klinika Praha 5 Stodůlky"
 theme = "veterina"
+
+# SEO nastavení
+[params]
+description = "Soukromá veterinární klinika v Praze 5 s rodinným přístupem. Komplexní péče o malá zvířata, psy, kočky, hlodavce. Ordinační hodiny 7 dní v týdnu."
+author = "MVDr. František Svozil"
+images = ["/images/logo.png"] # Pro Open Graph
+keywords = ["veterina", "veterinární klinika", "veterinář Praha 5", "veterina Stodůlky", "ošetření zvířat", "veterina psi kočky", "Praha 5 Stodůlky"]
+logo = "/images/logo.png"
+phone = "+420 777 033 353"
+email = "ordinace@veterinapaprsek.cz"
+address = "Hostinského 1076/8, 155 00 Praha 5"
 
 [menu]
 [[menu.main]]
