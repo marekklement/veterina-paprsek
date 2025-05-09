@@ -1318,6 +1318,79 @@ footer {
 
     .stats-container {
         margin: 0 auto;
+        width: 100%;
+        max-width: 600px;
+    }
+}
+
+/* Další responzivní úpravy pro menší obrazovky */
+@media (max-width: 768px) {
+    .clients-image {
+        height: 250px;
+    }
+
+    .clients-stats {
+        padding: 30px 15px;
+    }
+
+    .clients-stats .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .stat-item {
+        gap: 10px;
+    }
+
+    .stat-label {
+        flex: 0 0 80px;
+        font-size: 1rem;
+    }
+
+    .stat-value {
+        flex: 0 0 45px;
+        font-size: 1rem;
+    }
+}
+
+/* Další responzivní úpravy pro extra malé obrazovky */
+@media (max-width: 480px) {
+    .clients-image {
+        height: 200px;
+    }
+
+    .clients-stats {
+        padding: 25px 15px;
+    }
+
+    .clients-stats .section-title {
+        font-size: 1.6rem;
+        margin-bottom: 25px;
+    }
+
+    .stats-container {
+        gap: 20px;
+    }
+
+    .stat-item {
+        flex-wrap: wrap;
+    }
+
+    .stat-label {
+        flex: 0 0 100%;
+        text-align: left;
+        margin-bottom: 5px;
+        font-size: 0.95rem;
+    }
+
+    .stat-bar {
+        flex: 1 0 calc(100% - 55px);
+        height: 12px;
+    }
+
+    .stat-value {
+        flex: 0 0 45px;
+        font-size: 0.95rem;
     }
 }
 
