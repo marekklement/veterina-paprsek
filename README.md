@@ -5,8 +5,8 @@ This repository contains the source code for the [Veterina Paprsek](https://www.
 ## Technical Stack
 
 - **Static Site Generator**: [Hugo](https://gohugo.io/)
-- **Content Management**: [Netlify CMS](https://www.netlifycms.org/)
-- **Deployment**: [Netlify](https://www.netlify.com/)
+- **Content Management**: [Netlify CMS](https://www.netlify.com/)
+- **Deployment**: [Netlify](https://app.netlify.com/)
 - **Custom Theme**: "veterina" (custom-built theme for this project)
 - **Languages**: HTML, CSS, JavaScript
 - **Content Format**: Markdown and JSON
@@ -76,7 +76,7 @@ The site is deployed on Netlify with continuous deployment:
 - **Live Website**: [www.veterinapaprsek.cz](https://www.veterinapaprsek.cz)
 - **Admin Panel**: [www.veterinapaprsek.cz/admin](https://www.veterinapaprsek.cz/admin)
 - **Hugo Documentation**: [gohugo.io/documentation](https://gohugo.io/documentation/)
-- **Netlify CMS Documentation**: [netlifycms.org/docs](https://www.netlifycms.org/docs/intro/)
+- **Netlify CMS Documentation**: [https://docs.netlify.com/](https://www.netlifycms.org/docs/intro/)
 
 ## Benefits of Using Netlify
 
