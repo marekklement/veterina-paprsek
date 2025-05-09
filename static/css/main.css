@@ -40,17 +40,40 @@ header .container {
     align-items: center;
 }
 
-/* Levá část hlavičky - logo a telefonní čísla */
+/* Levá část hlavičky - telefonní čísla */
 .header-left {
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
-.header-logo img {
-    height: 50px;
-    width: auto;
-    margin-left: 40px;
+/* Pravá část hlavičky - Facebook ikona */
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.facebook-icon svg {
+    height: 24px;
+    width: 24px;
+}
+
+/* Skrytí Facebook ikony v hlavičce na menších obrazovkách */
+@media (max-width: 992px) {
+    .header-right {
+        display: none;
+    }
+}
+
+/* Třída pro položky, které se zobrazují pouze v mobilním menu */
+.mobile-only {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .mobile-only {
+        display: block;
+    }
 }
 
 /* Telefonní čísla */
