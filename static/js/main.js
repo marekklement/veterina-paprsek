@@ -37,8 +37,41 @@ function animateStats() {
     checkVisibility();
 }
 
+// Funkce pro ovládání scroll-to-top tlačítka
+function initScrollToTop() {
+    const scrollToTopButton = document.getElementById('scroll-to-top');
+
+    if (!scrollToTopButton) return;
+
+    // Zobrazí nebo skryje tlačítko podle pozice scrollu
+    function toggleScrollToTopButton() {
+        if (window.scrollY > 300) {
+            scrollToTopButton.classList.add('visible');
+        } else {
+            scrollToTopButton.classList.remove('visible');
+        }
+    }
+
+    // Přidání event listeneru pro scroll
+    window.addEventListener('scroll', toggleScrollToTopButton);
+
+    // Přidání event listeneru pro kliknutí na tlačítko
+    scrollToTopButton.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // Inicializace při načtení stránky
+    toggleScrollToTopButton();
+}
+
 // Po načtení DOMu spustí animační funkci
 document.addEventListener('DOMContentLoaded', function() {
+    // Inicializace scroll-to-top tlačítka
+    initScrollToTop();
+
     // Skript pro popup na hlavní stránce
     const popup = document.getElementById('main-popup');
     if (popup) {

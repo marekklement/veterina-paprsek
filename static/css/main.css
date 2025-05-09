@@ -11,6 +11,43 @@
     scroll-behavior: smooth; /* Plynulé rolování při kliknutí na kotvy */
 }
 
+/* Scroll to top button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #97c240; /* Zelená barva odpovídající barvě odkazů */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 99;
+}
+
+.scroll-to-top:hover {
+    background-color: #7da732; /* Tmavší zelená při najetí myší */
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Skrytí scroll-to-top tlačítka na mobilních zařízeních */
+@media (max-width: 992px) {
+    .scroll-to-top {
+        display: none;
+    }
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
