@@ -1,5 +1,5 @@
 ---
-title: Mgr. Petr Zeman
+title: Mgr. Petr Zeman, LL.M.
 position: Manager praxe
 weight: 2
 image: /images/uploads/petrzeman.jpg
