@@ -234,9 +234,10 @@
 
       <div class="contact-column">
         <h3 class="contact-column-title">Otevírací doba:</h3>
-        <p>Po-Pá: 15:00 - 21:00</p>
-        <p>So: 9:00 - 12:30</p>
-        <p>Ne: zavřeno</p>
+        {{ $lines := split .Site.Data.oteviraci_doba.oteviraci_doba_text "\n" }}
+        {{ range $lines }}
+        <p>{{ . }}</p>
+        {{ end }}
       </div>
 
       <div class="contact-column">

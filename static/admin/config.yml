@@ -64,3 +64,15 @@ collections:
                 widget: "list"
                 label_singular: "doktora"
                 field: { label: "Jméno", name: "jmeno", widget: "string" }
+
+  - name: "oteviraci-doba"
+    label: "Otevírací doba"
+    files:
+      - name: "oteviraci-doba"
+        label: "Otevírací doba"
+        file: "data/oteviraci_doba.json"
+        fields:
+          - label: "Otevírací doba (text)"
+            name: "oteviraci_doba_text"
+            widget: "text"
+            hint: "Zadejte otevírací dobu ve formátu 'Po-Pá: 15:00 - 21:00' (každý řádek pro jinou část otevírací doby)"
