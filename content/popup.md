@@ -2,4 +2,4 @@
 active: false
 title: Úprava otevírací doby
 ---
-### **Čtvrtek 8.5. - zavřeno**
+### **Úterý 28.10.2025 - zavřeno**
