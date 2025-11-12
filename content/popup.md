@@ -1,5 +1,5 @@
 ---
 active: true
-title: STÁTNÍ SVÁTEK
+title: otevírací doba 13.11.
 ---
-### **Úterý 28.10.2025 - zavřeno**
+**Č﻿tvrtek 13.11.2025, otevřeno 16:00 až 21:00**
