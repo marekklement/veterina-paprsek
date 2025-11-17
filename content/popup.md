@@ -1,5 +1,5 @@
 ---
 active: true
-title: otevírací doba 13.11.
+title: otevírací doba 17.11.
 ---
-**Č﻿tvrtek 13.11.2025, otevřeno 16:00 až 21:00**
+**Pondělí - 17.11.2025, zavřeno**
