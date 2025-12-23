@@ -1,6 +1,6 @@
 ---
 active: true
-title: otevírací doba 17.11.
+title: nejbližší otevírací doba
 ---
 **Úterý 23.12.2025 - otevřeno 9:00 až 14:30**
 
