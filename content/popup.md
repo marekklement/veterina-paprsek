@@ -2,4 +2,4 @@
 active: true
 title: nejbližší otevírací doba
 ---
-![](/images/uploads/velikonoce.png)
+![1.5.2026 - zavřeno]()
