@@ -2,4 +2,4 @@
 active: true
 title: nejbližší otevírací doba
 ---
-![1.5.2026 - zavřeno]()
+![8.5.2026 - otevřeno 9:00 - 12:30]()
