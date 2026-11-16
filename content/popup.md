@@ -1,5 +1,5 @@
 ---
 active: true
-title: 28. 10. 2026 - ZAVŘENO
+title: 17. 11. 2026 - ZAVŘENO
 ---
 ![]()
